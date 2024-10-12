@@ -28,7 +28,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://confide-service.netlify.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
