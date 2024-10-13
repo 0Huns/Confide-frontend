@@ -29,7 +29,6 @@
     "eject": "react-scripts eject"
   },
   "proxy": "http://Confide-Server-env.eba-yfgerhkz.ap-northeast-2.elasticbeanstalk.com/",
-  "homepage": "http://Confide-Server-env.eba-yfgerhkz.ap-northeast-2.elasticbeanstalk.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
