@@ -28,6 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://Confide-Server-env.eba-yfgerhkz.ap-northeast-2.elasticbeanstalk.com/",
+  "homepage": "http://confide-service.netlify.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
