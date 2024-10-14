@@ -28,7 +28,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-
+"proxy": "http://www.confide.store/",
+  "homepage": "http://www.confide.store/",
 
   "eslintConfig": {
     "extends": [
