@@ -3,10 +3,10 @@ import logout from "./logout";
 import store from "../store/index";
 import { setToken } from "../store/module/tokenModule";
 
-const API = window.location.hostname === "localhost" ? "" : "/api";
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const usersApi = axios.create({
-  baseURL: `${API}/user`,
+  baseURL: `${SERVER_URL}/user`,
   headers: {
     "Content-Type": "application/json",
   },
@@ -43,7 +43,7 @@ usersApi.interceptors.response.use(
     if (isUnauthorized && (isTokenExpired || isTokenRefreshLoss)) {
       try {
         const res = await axios.post(
-          `${API}/refresh`,
+          `${SERVER_URL}/refresh`,
           {},
           { "Content-Type": "application/json", withCredentials: true }
         );
