@@ -28,7 +28,7 @@ const login = async () => {
     } else {
       window.alert(`로그인 오류! : ${error.response.data.message}`);
     }
-    window.location.replace("/");
+    // window.location.replace("/");
   }
 };
 

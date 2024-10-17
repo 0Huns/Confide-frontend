@@ -29,7 +29,7 @@
     "eject": "react-scripts eject"
   },
   "proxy": "https://www.confide.store/",
-  
+  "homepage": "https://confide-service.netlify.app",
 
   "eslintConfig": {
     "extends": [
