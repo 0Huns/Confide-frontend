@@ -1,15 +1,14 @@
 import axios from "axios";
 
-const API = window.location.hostname === "localhost" ? "" : "/api";
+const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const login = async () => {
   const code = new URL(window.location.href).searchParams.get("code");
-  const url = `${API}/auth/?code=${code}`;
 
   try {
     const res = await axios({
       method: "POST",
-      url: `${url}`,
+      url: `${SERVER_URL}/auth/?code=${code}`,
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
