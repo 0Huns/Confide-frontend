@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { useUserDelPost } from "../hooks/useUserDelPost";
 import PostCard from "../component/PostCard";
 import { UserLoading } from "../component/Skeletone";
+import person from "../assets/person.png";
 
 function User() {
   const mutation = useUserDelPost();
@@ -42,7 +43,7 @@ function User() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
           <img
             alt="profileImg"
-            src="/images/person/1.jpg"
+            src={person}
             className="w-[100px] h-[100px] shadow-lg"
           />
           <div className="flex flex-col w-full sm:justify-between">
