@@ -1,70 +1,110 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <br>
+  <p>
+  Confide Project
+  </p>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">말 못할 고민을 털어놓고 의견을 공유하는 게시판 형식 커뮤니티</h4>
 
-## Available Scripts
+<br>
 
-In the project directory, you can run:
+## 프로젝트 정보
 
-### `npm start`
+📆 개발 기간 : 2024. 07. 15 - 2024. 10. 08
+> 백엔드 github : //...추가 예정
+<br>
+<br>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 기술 스택
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 🪄&ensp;프론트엔드
 
-### `npm test`
+<div> 
+  <img src="https://img.shields.io/badge/react-20232a.svg?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white">
+  <img src="https://img.shields.io/badge/react--query-FF4154?style=for-the-badge&logo=react-query&logoColor=white"> <br>
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🪄&ensp;배포
 
-### `npm run build`
+<div>
+  <img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" />
+</div>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 아키텍쳐
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📢&ensp;파일 구조 트리
 
-### `npm run eject`
+```bash
+📦src
+ ┣ 📂assets // 이미지 파일
+ ┣ 📂component
+ ┃ ┣ 📜Body.js
+ ┃ ┣ 📜Comment.js
+ ┃ ┣ 📜Content.js
+ ┃ ┣ 📜NewPost.js
+ ┃ ┣ 📜PostCard.js
+ ┃ ┣ 📜PostDetail.js
+ ┃ ┣ 📜Posts.js
+ ┃ ┗ 📜Skeletone.js
+ ┣ 📂hooks
+ ┃ ┣ 📜useUserAccess.js
+ ┃ ┣ 📜useUserComment.js
+ ┃ ┣ 📜useUserDelPost.js
+ ┃ ┣ 📜useUserInfo.js
+ ┃ ┣ 📜useUserNewPost.js
+ ┃ ┣ 📜useUserPostById.js
+ ┃ ┗ 📜useUserPosts.js
+ ┣ 📂pages
+ ┃ ┣ 📜App.js
+ ┃ ┣ 📜Auth.js
+ ┃ ┣ 📜Intro.js
+ ┃ ┣ 📜Main.js
+ ┃ ┗ 📜User.js
+ ┣ 📂services
+ ┃ ┣ 📜login.js
+ ┃ ┣ 📜logout.js
+ ┃ ┗ 📜usersApi.js
+ ┣ 📂store
+ ┃ ┣ 📂module
+ ┃ ┃ ┣ 📜rootReducer.js
+ ┃ ┃ ┣ 📜themeModule.js
+ ┃ ┃ ┗ 📜tokenModule.js
+ ┃ ┗ 📜index.js
+ ┣ 📂styles
+ ┃ ┗ 📜App.css
+ ┣ 📜App.test.js
+ ┣ 📜index.css
+ ┣ 📜index.js
+ ┗ 📜setupTests.js
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<br>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 📢&ensp;프론트엔드 아키텍쳐
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+<br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## UI 구성
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br>
 
-### Analyzing the Bundle Size
+## 주요 기능
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- 회원가입 ・ 로그인
+- 마이페이지
+- 글 작성 ・ 삭제
+- 댓글
 
-### Making a Progressive Web App
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 회고 및 소감
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
