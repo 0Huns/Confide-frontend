@@ -8,7 +8,7 @@ const login = async () => {
   try {
     const res = await axios({
       method: "POST",
-      url: `${API}/auth/?code=${code}`,
+      url: `/api/auth/?code=${code}`,
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
