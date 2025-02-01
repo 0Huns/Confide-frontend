@@ -28,8 +28,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://Confide-env-1.eba-geg4zhf4.ap-northeast-2.elasticbeanstalk.com/",
-  "homepage": "http://Confide-env-1.eba-geg4zhf4.ap-northeast-2.elasticbeanstalk.com/",
 
   "eslintConfig": {
     "extends": [
