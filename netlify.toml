@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://www.confide.store/:splat"
+  to = "http://Confide-env-1.eba-geg4zhf4.ap-northeast-2.elasticbeanstalk.com/:splat"
   status = 200
   force = true
 
