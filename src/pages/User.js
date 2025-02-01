@@ -41,11 +41,7 @@ function User() {
     <section className="min-h-lvh dark:bg-gray-600">
       <div className="p-6 m-auto bg-[#e2e6a6] dark:bg-gray-800 rounded-b-lg shadow-md max-w-screen-lg">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-          <img
-            alt="profileImg"
-            src={person}
-            className="w-[100px] h-[100px] shadow-lg"
-          />
+          <img alt="profileImg" src={person} className="w-[100px] h-[100px]" />
           <div className="flex flex-col w-full sm:justify-between">
             <div className="flex flex-col items-center mt-4 sm:items-start sm:mt-0">
               <p className="mb-4 text-2xl font-semibold text-gray-800 dark:text-gray-100">
