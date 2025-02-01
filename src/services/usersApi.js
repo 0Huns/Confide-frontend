@@ -4,10 +4,9 @@ import store from "../store/index";
 import { setToken } from "../store/module/tokenModule";
 
 const API = window.location.hostname === "localhost" ? "" : "/api";
-const SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const usersApi = axios.create({
-  baseURL: `${SERVER_URL}/user`,
+  baseURL: `${API}/user`,
   headers: {
     "Content-Type": "application/json",
   },
