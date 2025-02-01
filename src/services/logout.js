@@ -8,7 +8,7 @@ const logout = async () => {
   try {
     // 서버에 로그아웃 요청
     const userId = store.getState().tokenModule.userId;
-    await axios.post(`${API}/logout`, { userId }, { withCredentials: true });
+    await axios.post(`/api/logout`, { userId }, { withCredentials: true });
 
     // 클라이언트 측 토큰 제거
     store.dispatch(clearToken());

@@ -6,7 +6,7 @@ import { setToken } from "../store/module/tokenModule";
 const API = window.location.hostname === "localhost" ? "" : "/api";
 
 const usersApi = axios.create({
-  baseURL: `${API}/user`,
+  baseURL: `/api/user`,
   headers: {
     "Content-Type": "application/json",
   },
