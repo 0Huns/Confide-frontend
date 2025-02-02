@@ -1,6 +1,6 @@
 [[redirects]]
   from = "/api/*"
-  to = "https://www.confide.store/:splat"
+  to = "https://confide.store/:splat"
   status = 200
   force = true
 
