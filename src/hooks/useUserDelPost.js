@@ -1,7 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import usersApi from "../services/usersApi";
-import { useDispatch } from "react-redux";
-import { setShouldFetch } from "../store/module/fetchModule";
 
 const fetchUserDelPost = async ({ id }) => {
   try {
@@ -15,7 +13,10 @@ const fetchUserDelPost = async ({ id }) => {
 };
 
 export const useUserDelPost = () => {
-  const dispatch = useDispatch();
+  const existingData = JSON.parse(localStorage.getItem("myPost")) || {
+    myposet: [],
+    fetch: false,
+  };
   const queryClient = useQueryClient();
 
   return useMutation({
@@ -23,7 +24,8 @@ export const useUserDelPost = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["userPosts"] });
       queryClient.invalidateQueries({ queryKey: ["userProfile"] });
-      dispatch(setShouldFetch(true));
+      existingData.fetch = "true";
+      localStorage.setItem("myPost", JSON.stringify(existingData));
     },
   });
 };
