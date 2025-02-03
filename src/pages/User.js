@@ -29,7 +29,7 @@ function User() {
     const fetchUserInfo = async () => {
       try {
         const response = await usersApi.get("/profile"); // API 호출
-        setData(response.data);
+        setData(response.data.data);
       } catch (error) {
         console.error("Error fetching user info:", error);
       }
