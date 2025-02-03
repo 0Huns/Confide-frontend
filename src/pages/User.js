@@ -1,44 +1,27 @@
-import React, { useEffect, useState } from "react";
-
+import React from "react";
+import { useUserInfo } from "../hooks/useUserInfo";
 import { useSelector } from "react-redux";
 import { useUserDelPost } from "../hooks/useUserDelPost";
 import PostCard from "../component/PostCard";
-
+import { UserLoading } from "../component/Skeletone";
 import person from "../assets/person.png";
-import usersApi from "../services/usersApi";
 
 function User() {
   const mutation = useUserDelPost();
   const userId = useSelector((state) => state.tokenModule.userId);
-  const [data, setData] = useState(null);
-  // const { data, isLoading, isError, isFetching } = useUserInfo();
+  const { data, isLoading, isError, isFetching } = useUserInfo();
 
-  // if (isFetching || isLoading) {
-  //   return <UserLoading />;
-  // }
+  if (isFetching || isLoading) {
+    return <UserLoading />;
+  }
 
-  // if (isError) {
-  //   return (
-  //     <div className="text-center text-red-500">
-  //       Error: 데이터를 불러오지 못했습니다.
-  //     </div>
-  //   );
-  // }
-
-  useEffect(() => {
-    const fetchUserInfo = async () => {
-      try {
-        const response = await usersApi.get("/profile"); // API 호출
-        setData(response.data.data);
-      } catch (error) {
-        console.error("Error fetching user info:", error);
-      }
-    };
-
-    fetchUserInfo();
-  }, []);
-
-  console.log(data);
+  if (isError) {
+    return (
+      <div className="text-center text-red-500">
+        Error: 데이터를 불러오지 못했습니다.
+      </div>
+    );
+  }
 
   const onDelete = (id) => {
     mutation.mutate(
