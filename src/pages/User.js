@@ -1,14 +1,44 @@
-import React from "react";
-import { useUserInfo } from "../hooks/useUserInfo";
+import React, { useEffect, useState } from "react";
+
 import { useSelector } from "react-redux";
 import { useUserDelPost } from "../hooks/useUserDelPost";
 import PostCard from "../component/PostCard";
+
 import person from "../assets/person.png";
+import usersApi from "../services/usersApi";
 
 function User() {
   const mutation = useUserDelPost();
   const userId = useSelector((state) => state.tokenModule.userId);
-  const { data } = useUserInfo();
+  const [data, setData] = useState(null);
+  // const { data, isLoading, isError, isFetching } = useUserInfo();
+
+  // if (isFetching || isLoading) {
+  //   return <UserLoading />;
+  // }
+
+  // if (isError) {
+  //   return (
+  //     <div className="text-center text-red-500">
+  //       Error: 데이터를 불러오지 못했습니다.
+  //     </div>
+  //   );
+  // }
+
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+      try {
+        const response = await usersApi.get("/profile"); // API 호출
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching user info:", error);
+      }
+    };
+
+    fetchUserInfo();
+  }, []);
+
+  console.log(data);
 
   const onDelete = (id) => {
     mutation.mutate(
@@ -39,7 +69,7 @@ function User() {
                   Articles
                 </span>
                 <p className="text-xl font-bold text-center text-black dark:text-white">
-                  2
+                  {data.length}
                 </p>
               </div>
             </div>
