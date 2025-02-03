@@ -28,10 +28,18 @@
   <img src="https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"><br>
 </div>
 
+### 🪄&ensp;백엔드
+
+<div> 
+  <img src="https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/mongodb-47A248?style=for-the-badge&logo=mongodb&logoColor=white">
+</div>
+
 ### 🪄&ensp;배포
 
 <div>
   <img src="https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7" />
+  <img src="https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white" />
 </div>
 
 <br>
@@ -77,8 +85,13 @@
 
 ## UI 구성
 
-
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5ce4b90d-d165-406d-9017-516f69858d49" align="center" width="50%">  
+  <img src="https://github.com/user-attachments/assets/d864104f-f1e5-4745-a7e0-d5da1f9943dd" align="center" width="50%"> 
+  <img src="https://github.com/user-attachments/assets/2ab8020a-9c0b-4065-838c-9cae0f15f571" align="center" width="50%">
+  <img src="https://github.com/user-attachments/assets/fc4b8b1e-3d1e-4436-914f-0b12e7751cb4" align="center" width="50%"> 
+  <img src="https://github.com/user-attachments/assets/c1c2916b-1429-49c5-89ba-73a2add8c931" align="center" width="50%"> 
+</p>
 <br>
 
 ## 주요 기능
