@@ -17,7 +17,7 @@ const fetchUserNewPost = async ({ title, content }) => {
 };
 
 export const useUserNewPost = () => {
-  const existingData = JSON.parse(localStorage.getItem("myPost")) || {
+  const existingData = JSON.parse(sessionStorage.getItem("myPost")) || {
     myposet: [],
     fetch: false,
   };
@@ -29,7 +29,7 @@ export const useUserNewPost = () => {
       queryClient.invalidateQueries({ queryKey: ["userPosts"] });
       queryClient.invalidateQueries({ queryKey: ["userProfile"] });
       existingData.fetch = true;
-      localStorage.setItem("myPost", JSON.stringify(existingData));
+      sessionStorage.setItem("myPost", JSON.stringify(existingData));
     },
   });
 };
