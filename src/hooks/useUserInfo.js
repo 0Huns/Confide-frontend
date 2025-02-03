@@ -1,18 +1,38 @@
 import { useQuery } from "@tanstack/react-query";
 import usersApi from "../services/usersApi";
-
-const fetchUserInfo = async () => {
-  const response = await usersApi.get("/profile");
-  return response.data;
-};
+import { useDispatch, useSelector } from "react-redux";
+import { setShouldFetch } from "../store/module/fetchModule";
 
 export const useUserInfo = () => {
-  return useQuery({
+  const dispatch = useDispatch();
+  const storedData = localStorage.getItem("myPost");
+  const shouldFetch = useSelector((state) => state.fetch.shouldFetch);
+
+  const { data, isLoading, isError, isFetching } = useQuery({
     queryKey: ["userProfile"],
-    queryFn: fetchUserInfo,
-    retry: 1, // 실패한 요청을 재시도하는 횟수 설정
-    refetchOnWindowFocus: true, // 윈도우 포커스 시 다시 요청
-    refetchOnReconnect: true, // 네트워크 재연결 시 다시 요청
+    queryFn: async () => {
+      const response = await usersApi.get("/profile");
+      localStorage.setItem(
+        "myPost",
+        JSON.stringify({
+          mypost: response.data,
+        })
+      );
+      dispatch(setShouldFetch(true));
+      return response.data;
+    },
+    enabled: shouldFetch,
+    retry: 0,
+    refetchOnWindowFocus: false,
+    refetchOnReconnect: true,
     staleTime: 100000,
   });
+
+  // localStorage에 저장된 데이터가 있으면 반환, 없으면 API 데이터 반환
+  return {
+    data: storedData?.mypost || data,
+    isLoading: isLoading && !storedData,
+    isError,
+    isFetching,
+  };
 };

@@ -1,28 +1,33 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import usersApi from '../services/usersApi';
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import usersApi from "../services/usersApi";
+import { useDispatch } from "react-redux";
+import { setShouldFetch } from "../store/module/fetchModule";
 
 const fetchUserNewPost = async ({ title, content }) => {
-  try{
+  try {
     return await usersApi.post(
-      '/newPost',
+      "/newPost",
       {
         title: title,
-        content: content
+        content: content,
       },
-      { 'Content-Type': 'application/json', withCredentials: true, });
-  }catch(err){
+      { "Content-Type": "application/json", withCredentials: true }
+    );
+  } catch (err) {
     throw new Error("Failed to post data");
   }
 };
 
 export const useUserNewPost = () => {
+  const dispatch = useDispatch();
   const queryClient = useQueryClient();
 
   return useMutation({
     mutationFn: fetchUserNewPost,
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['userPosts'] });
-      queryClient.invalidateQueries({ queryKey: ['userProfile'] });
-    }
-  })
+      queryClient.invalidateQueries({ queryKey: ["userPosts"] });
+      queryClient.invalidateQueries({ queryKey: ["userProfile"] });
+      dispatch(setShouldFetch(false));
+    },
+  });
 };
