@@ -28,7 +28,7 @@ export const useUserNewPost = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["userPosts"] });
       queryClient.invalidateQueries({ queryKey: ["userProfile"] });
-      existingData.fetch = "true";
+      existingData.fetch = true;
       localStorage.setItem("myPost", JSON.stringify(existingData));
     },
   });
