@@ -6,7 +6,7 @@ import { setShouldFetch } from "../store/module/fetchModule";
 export const useUserInfo = () => {
   const dispatch = useDispatch();
   const storedData = localStorage.getItem("myPost");
-  const shouldFetch = useSelector((state) => state.fetch.shouldFetch);
+  const shouldFetch = useSelector((state) => state.fetchModule.shouldFetch);
 
   const { data, isLoading, isError, isFetching } = useQuery({
     queryKey: ["userProfile"],
