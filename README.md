@@ -86,11 +86,11 @@
 ## UI 구성
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5ce4b90d-d165-406d-9017-516f69858d49" align="center" width="50%">  
-  <img src="https://github.com/user-attachments/assets/d864104f-f1e5-4745-a7e0-d5da1f9943dd" align="center" width="50%"> 
-  <img src="https://github.com/user-attachments/assets/2ab8020a-9c0b-4065-838c-9cae0f15f571" align="center" width="50%">
-  <img src="https://github.com/user-attachments/assets/fc4b8b1e-3d1e-4436-914f-0b12e7751cb4" align="center" width="50%"> 
-  <img src="https://github.com/user-attachments/assets/c1c2916b-1429-49c5-89ba-73a2add8c931" align="center" width="50%"> 
+  <img src="https://github.com/user-attachments/assets/5ce4b90d-d165-406d-9017-516f69858d49" align="center" width="30%">  
+  <img src="https://github.com/user-attachments/assets/d864104f-f1e5-4745-a7e0-d5da1f9943dd" align="center" width="30%"> 
+  <img src="https://github.com/user-attachments/assets/2ab8020a-9c0b-4065-838c-9cae0f15f571" align="center" width="30%">
+  <img src="https://github.com/user-attachments/assets/fc4b8b1e-3d1e-4436-914f-0b12e7751cb4" align="center" width="30%"> 
+  <img src="https://github.com/user-attachments/assets/c1c2916b-1429-49c5-89ba-73a2add8c931" align="center" width="30%"> 
 </p>
 <br>
 
