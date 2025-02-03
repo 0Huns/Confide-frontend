@@ -39,7 +39,7 @@ function User() {
                   Articles
                 </span>
                 <p className="text-xl font-bold text-center text-black dark:text-white">
-                  {data.length}
+                  2
                 </p>
               </div>
             </div>
