@@ -3,25 +3,12 @@ import { useUserInfo } from "../hooks/useUserInfo";
 import { useSelector } from "react-redux";
 import { useUserDelPost } from "../hooks/useUserDelPost";
 import PostCard from "../component/PostCard";
-import { UserLoading } from "../component/Skeletone";
 import person from "../assets/person.png";
 
 function User() {
   const mutation = useUserDelPost();
   const userId = useSelector((state) => state.tokenModule.userId);
-  const { data, isLoading, isError, isFetching } = useUserInfo();
-
-  if (isFetching || isLoading) {
-    return <UserLoading />;
-  }
-
-  if (isError) {
-    return (
-      <div className="text-center text-red-500">
-        Error: 데이터를 불러오지 못했습니다.
-      </div>
-    );
-  }
+  const { data } = useUserInfo();
 
   const onDelete = (id) => {
     mutation.mutate(
