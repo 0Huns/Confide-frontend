@@ -18,7 +18,7 @@ export const useUserInfo = () => {
           mypost: response.data,
         })
       );
-      dispatch(setShouldFetch(true));
+      dispatch(setShouldFetch(false));
       return response.data;
     },
     enabled: shouldFetch,

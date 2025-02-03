@@ -6,7 +6,7 @@ export const setShouldFetch = (shouldFetch) => ({
 });
 
 const initialState = {
-  shouldFetch: false,
+  shouldFetch: true,
 };
 
 const fetchModule = (state = initialState, action) => {

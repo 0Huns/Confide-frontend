@@ -27,7 +27,7 @@ export const useUserNewPost = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["userPosts"] });
       queryClient.invalidateQueries({ queryKey: ["userProfile"] });
-      dispatch(setShouldFetch(false));
+      dispatch(setShouldFetch(true));
     },
   });
 };

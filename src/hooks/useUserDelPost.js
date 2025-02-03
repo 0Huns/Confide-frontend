@@ -23,7 +23,7 @@ export const useUserDelPost = () => {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["userPosts"] });
       queryClient.invalidateQueries({ queryKey: ["userProfile"] });
-      dispatch(setShouldFetch(false));
+      dispatch(setShouldFetch(true));
     },
   });
 };
