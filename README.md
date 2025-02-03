@@ -12,7 +12,7 @@
 ## 프로젝트 정보
 
 📆 개발 기간 : 2024. 07. 15 - 2024. 10. 08
-> 백엔드 github : //...추가 예정
+> 백엔드 github : [백엔드 서버 주소](https://github.com/0Huns/Confide-backend)
 <br>
 <br>
 
@@ -23,7 +23,9 @@
 <div> 
   <img src="https://img.shields.io/badge/react-20232a.svg?style=for-the-badge&logo=react&logoColor=61DAFB" />
   <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white">
-  <img src="https://img.shields.io/badge/react--query-FF4154?style=for-the-badge&logo=react-query&logoColor=white"> <br>
+  <img src="https://img.shields.io/badge/react--query-FF4154?style=for-the-badge&logo=react-query&logoColor=white"> 
+  <img src="https://img.shields.io/badge/redux-764ABC?style=for-the-badge&logo=redux&logoColor=white">
+  <img src="https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"><br>
 </div>
 
 ### 🪄&ensp;배포
@@ -42,22 +44,9 @@
 📦src
  ┣ 📂assets // 이미지 파일
  ┣ 📂component
- ┃ ┣ 📜Body.js
- ┃ ┣ 📜Comment.js
- ┃ ┣ 📜Content.js
- ┃ ┣ 📜NewPost.js
- ┃ ┣ 📜PostCard.js
- ┃ ┣ 📜PostDetail.js
- ┃ ┣ 📜Posts.js
- ┃ ┗ 📜Skeletone.js
+ ┃ ┗ ...  // 프로젝트 내 컴포넌트 파일 관리
  ┣ 📂hooks
- ┃ ┣ 📜useUserAccess.js
- ┃ ┣ 📜useUserComment.js
- ┃ ┣ 📜useUserDelPost.js
- ┃ ┣ 📜useUserInfo.js
- ┃ ┣ 📜useUserNewPost.js
- ┃ ┣ 📜useUserPostById.js
- ┃ ┗ 📜useUserPosts.js
+ ┃ ┗ ...  // api 관련 hooks 파일 
  ┣ 📂pages
  ┃ ┣ 📜App.js
  ┃ ┣ 📜Auth.js
@@ -65,14 +54,10 @@
  ┃ ┣ 📜Main.js
  ┃ ┗ 📜User.js
  ┣ 📂services
- ┃ ┣ 📜login.js
- ┃ ┣ 📜logout.js
- ┃ ┗ 📜usersApi.js
+ ┃ ┗ ...  // auth 관련 api 파일
  ┣ 📂store
  ┃ ┣ 📂module
- ┃ ┃ ┣ 📜rootReducer.js
- ┃ ┃ ┣ 📜themeModule.js
- ┃ ┃ ┗ 📜tokenModule.js
+ ┃ ┗ ...  // 리덕스 모듈 파일
  ┃ ┗ 📜index.js
  ┣ 📂styles
  ┃ ┗ 📜App.css
@@ -86,7 +71,7 @@
 
 ### 📢&ensp;프론트엔드 아키텍쳐
 
-
+![아키텍쳐](https://github.com/user-attachments/assets/55422252-222f-4233-a44c-28ff6a9a2e89)
 
 <br>
 
@@ -102,9 +87,5 @@
 - 마이페이지
 - 글 작성 ・ 삭제
 - 댓글
-
-<br>
-
-## 회고 및 소감
 
 
