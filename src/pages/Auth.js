@@ -15,6 +15,8 @@ function Auth() {
     if (loginRes) {
       dispatch(setToken(accessToken, userId));
       return navigate("/main/post", { replace: true });
+    } else {
+      window.alert("저장안됨!");
     }
   };
 
