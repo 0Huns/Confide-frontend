@@ -11,9 +11,11 @@ const login = async () => {
   try {
     const res = await axios({
       method: "POST",
-      url: `${API}/loginAuth?code=${code}&state=${state}`,
+      url: `${API}/loginAuth`,
       headers: {
         "Content-Type": "application/json;charset=utf-8",
+        code: code,
+        state: state,
       },
       withCredentials: true,
     });
