@@ -7,6 +7,7 @@ function Intro() {
   const handleKakaoLogin = async () => {
     try {
       const res = await axios.get("/api/kakaoAuth");
+      console.log(res);
       if (res.data.kakaoAuthUrl) {
         window.location.href = res.data.kakaoAuthUrl;
       }
