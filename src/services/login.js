@@ -21,6 +21,8 @@ const login = async () => {
     });
     const accessToken = res.data.accesstoken;
     const userId = res.data.userid;
+    console.log(accessToken);
+    console.log(userId);
     return {
       accessToken,
       userId,
