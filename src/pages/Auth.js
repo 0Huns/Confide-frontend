@@ -10,14 +10,7 @@ function Auth() {
   const dispatch = useDispatch();
 
   const loginApi = async () => {
-    const loginRes = await login();
-    const { accessToken, userId } = loginRes;
-    if (loginRes) {
-      dispatch(setToken(accessToken, userId));
-      return navigate("/main/post", { replace: true });
-    } else {
-      window.alert("저장안됨!");
-    }
+    window.alert("hi");
   };
 
   useEffect(() => {
