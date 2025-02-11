@@ -12,7 +12,8 @@ const login = async () => {
       },
       withCredentials: true,
     });
-    const { accessToken, userId } = res.data;
+    const accessToken = res.headers["accesstoken"];
+    const userId = res.headers["userid"];
     return {
       accessToken,
       userId,
