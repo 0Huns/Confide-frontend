@@ -3,18 +3,22 @@ import axios from "axios";
 const API = window.location.hostname === "localhost" ? "" : "/api";
 
 const login = async () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+
+  const code = urlParams.get("code");
+  const state = urlParams.get("state");
   try {
     const res = await axios({
       method: "POST",
-      url: `${API}/auth`,
+      url: `${API}/loginAuth?code=${code}&state=${state}`,
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       withCredentials: true,
     });
-    console.log(res);
-    const accessToken = res.headers["accesstoken"];
-    const userId = res.headers["userid"];
+    const accessToken = res.data["accesstoken"];
+    const userId = res.data["userid"];
     return {
       accessToken,
       userId,

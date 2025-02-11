@@ -10,7 +10,12 @@ function Auth() {
   const dispatch = useDispatch();
 
   const loginApi = async () => {
-    window.alert("hi");
+    const loginRes = await login();
+    const { accessToken, userId } = loginRes;
+    if (loginRes) {
+      dispatch(setToken(accessToken, userId));
+      return navigate("/main/post", { replace: true });
+    }
   };
 
   useEffect(() => {
