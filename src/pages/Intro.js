@@ -1,15 +1,21 @@
 import React from "react";
 import kakaoLoginImage from "../assets/kakao_login_large_wide.png";
 import image from "../assets/introimage.jpg";
-const CLIENT_ID = process.env.REACT_APP_REST_API_KEY;
-const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URL;
-
-const KAKAO_AUTH_URL = `https://kauth.kakao.com/oauth/authorize?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&response_type=code`;
+import axios from "axios";
 
 function Intro() {
-  const handleKakaoLogin = () => {
-    window.location.href = KAKAO_AUTH_URL;
+  const handleKakaoLogin = async () => {
+    try {
+      const res = await axios.get("/api/kakaoAuth");
+      if (res.data.kakaoAuthUrl) {
+        window.location.href = res.data.kakaoAuthUrl;
+      }
+    } catch (error) {
+      console.error("카카오 로그인 URL 요청 실패:", error);
+      alert("로그인 요청 중 오류가 발생했습니다.");
+    }
   };
+
   return (
     <>
       <section className="relative flex flex-wrap lg:h-screen lg:items-center">

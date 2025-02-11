@@ -3,12 +3,10 @@ import axios from "axios";
 const API = window.location.hostname === "localhost" ? "" : "/api";
 
 const login = async () => {
-  const code = new URL(window.location.href).searchParams.get("code");
-
   try {
     const res = await axios({
       method: "POST",
-      url: `${API}/auth/?code=${code}`,
+      url: `${API}/auth`,
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
