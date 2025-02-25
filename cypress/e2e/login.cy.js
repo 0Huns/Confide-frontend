@@ -19,8 +19,11 @@ describe("로그인 테스트", () => {
       cy.get("button").contains("로그인").click();
     });
 
-    cy.intercept("GET", "/api/user/posts").as("mainPage");
-    cy.wait("@mainPage").its("response.statusCode").should("eq", 200);
-    cy.url().should("include", "/main/post");
+    cy.intercept("POST", "/api/loginAuth").as("loginAuth");
+    cy.wait("@loginAuth").then((interception) => {
+      const responseBody = interception.response.body;
+      expect(responseBody).to.have.property("accessToken");
+    });
+    cy.getCookie("refreshToken").should("exist");
   });
 });
