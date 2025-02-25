@@ -24,3 +24,4 @@ yarn-error.log*
 
 # API Keys
 .env
+cypress.env.json
