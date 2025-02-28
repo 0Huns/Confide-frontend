@@ -52,7 +52,7 @@ function User() {
                   Articles
                 </span>
                 <p className="text-xl font-bold text-center text-black dark:text-white">
-                  {data.length}
+                  {data.length ? data.length : 0}
                 </p>
               </div>
             </div>
