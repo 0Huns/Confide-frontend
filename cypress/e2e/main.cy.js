@@ -59,6 +59,8 @@ describe("메인페이지 테스트", () => {
           cy.url().should("include", "/post/");
           cy.get("h1.text-2xl").should("have.text", title.trim());
         });
+      cy.get(".justify-start > button").click();
+      cy.url().should("include", "/main/post");
     });
   });
 
@@ -75,6 +77,8 @@ describe("메인페이지 테스트", () => {
       cy.url().should("include", "/main/post");
       cy.get('[href="/main/newPost"]').eq(0).click();
       cy.url().should("include", "/main/newPost");
+      cy.get(".justify-start > button").click();
+      cy.url().should("include", "/main/post");
     });
 
     it("테마 버튼 동작 확인", () => {
