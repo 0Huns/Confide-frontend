@@ -25,9 +25,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
-    "eject": "react-scripts eject",
-    "postinstall": "if [ \"$NODE_ENV\" != \"production\" ]; then npm run test; fi"
+    "test": "cypress run",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
