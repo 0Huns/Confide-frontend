@@ -89,12 +89,5 @@ describe("메인페이지 테스트", () => {
       cy.get(".flex > .relative").click();
       cy.get("html").should("have.class", "");
     });
-
-    // it("로그아웃 버튼 동작 확인", () => {
-    //   cy.visit("/main/post");
-    //   cy.url().should("include", "/main/post");
-    //   cy.contains("button", "LOGOUT").click();
-    //   cy.url().should("include", "/");
-    // });
   });
 });
