@@ -11,6 +11,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:cypress/recommended",
     "plugin:jsx-a11y/recommended",
+    "prettier",
   ],
   parserOptions: {
     ecmaVersion: 2021,
