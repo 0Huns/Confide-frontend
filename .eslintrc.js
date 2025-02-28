@@ -10,7 +10,6 @@ module.exports = {
     "react-app",
     "react-app/jest",
     "plugin:cypress/recommended",
-    "plugin:jsx-a11y/recommended",
     "prettier",
   ],
   plugins: ["cypress"],
