@@ -46,6 +46,20 @@ describe("메인페이지 테스트", () => {
             });
         });
     });
+
+    it("메인 게시글 상세페이지 확인", () => {
+      cy.visit("/main/post");
+
+      cy.get("ul > li")
+        .first()
+        .find("h3")
+        .invoke("text")
+        .then((title) => {
+          cy.get("ul > li").first().click();
+          cy.url().should("include", "/post/");
+          cy.get("h1.text-2xl").should("have.text", title.trim());
+        });
+    });
   });
 
   context("Nav 버튼 작동 확인", () => {
