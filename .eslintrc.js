@@ -7,6 +7,8 @@ module.exports = {
     "cypress/globals": true,
   },
   extends: [
+    "react-app",
+    "react-app/jest",
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:cypress/recommended",
